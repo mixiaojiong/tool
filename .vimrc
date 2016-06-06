@@ -47,7 +47,7 @@ set backspace=indent,eol,start      " 启用backspace删除
 set clipboard+=unnamed              " 共享剪切板
 set showcmd                         " 输入的命令显示出来
 set iskeyword+=_,$,@,%,#,-          " 带有例如以下符号的单词不要被换行切割
-set mouse=a                         " 鼠标可用
+"set mouse=a                         " 鼠标可用
 set confirm                         " 未保存或者仅仅读时，弹出确认
 set nobackup                        " 不生成备份文件
 set noswapfile                      " 不生成 swap 文件
