@@ -15,27 +15,24 @@ Plugin 'fatih/vim-go'									" golang
 Plugin 'evanmiller/nginx-vim-syntax'					" nginx配置文件
 Plugin 'Lokaltog/vim-easymotion'						" 强大的跳转
 Plugin 'majutsushi/tagbar'                              " 代码导航
-Plugin 'vim-scripts/matchit.zip'                        " html标签匹配
-Plugin 'valloric/MatchTagAlways'                        " html标签高亮匹配
-Plugin 'maksimr/vim-jsbeautify'                         " 格式化代码
+
 
 " 插件相关
 " syntastic {
     " dependence
-    let g:syntastic_error_symbol='>>'
-    let g:syntastic_warning_symbol='>'
-    let g:syntastic_check_on_open=1
-    let g:syntastic_check_on_wq=0
-    let g:syntastic_enable_highlighting=1
+    "let g:syntastic_error_symbol='>>'
+    "let g:syntastic_warning_symbol='>'
+    "let g:syntastic_check_on_open=1
+    "let g:syntastic_check_on_wq=0
+    "let g:syntastic_enable_highlighting=1
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
-    "set statusline+=%#warningmsg#
-    "set statusline+=%{SyntasticStatuslineFlag()}
-    "set statusline+=%*
-
-    "let g:syntastic_always_populate_loc_list = 1
-    "let g:syntastic_auto_loc_list = 1
-    "let g:syntastic_check_on_open = 1
-    "let g:syntastic_check_on_wq = 0
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
 " }
 
 " DoxygenToolkit {
@@ -43,31 +40,6 @@ Plugin 'maksimr/vim-jsbeautify'                         " 格式化代码
 	let g:DoxygenToolkit_paramTag_pre="@raram "
 	let g:DoxygenToolkit_returnTag="@return   "
 	let g:DoxygenToolkit_authorName="zhaorui, zhaorui3@le.com"
-" }
-
-" MatchTagAlways {
-    let g:mta_use_matchparen_group = 1
-    let g:mta_filetypes = {
-        \ 'html' : 1,
-        \ 'xhtml' : 1,
-        \ 'xml' : 1,
-        \ 'php' : 1,
-        \ 'jinja' : 1,
-        \}
-" }
-
-" jsbeautify {
-	map <F6> :call JsBeautify()<cr>
-	" or
-	autocmd FileType javascript noremap <buffer>  <F6> :call JsBeautify()<cr>
-	" for json
-	autocmd FileType json noremap <buffer> <F6> :call JsonBeautify()<cr>
-	" for jsx
-	autocmd FileType jsx noremap <buffer> <F6> :call JsxBeautify()<cr>
-	" for html
-	autocmd FileType html noremap <buffer> <F6> :call HtmlBeautify()<cr>
-	" for css or scss
-	autocmd FileType css noremap <buffer> <F6> :call CSSBeautify()<cr>
 " }
 
 " easymotion {

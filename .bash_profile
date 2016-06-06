@@ -10,7 +10,7 @@ alias letv="cd ~/Code/letv/"
 alias mysql="mysql -u root"
 alias SCODE="sh ~/Tool/searchCode.sh"
 #nginx
-alias nginx.configure='./configure --prefix=../dst --add-module=../module/sso --with-debug --add-module=../module/echo'
+alias nginx.configure='./configure --prefix=../dst --add-module=../module/test --with-debug --add-module=../module/echo'
 alias nginx.kill='ps aux | grep nginx | grep -v svn | awk '\''{print $2}'\'' | xargs kill -9'
 alias nginx.module='./objs/nginx &'
 alias nginx.start="sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist"

@@ -83,16 +83,16 @@ map <F2>a :DoxAuthor<CR>
 map <F2>f :Dox<CR>
 map <F2>b :DoxBlock<CR>
 map <F2>c O/** */<Left><Left><CR>
+" F3 换行开关
+nnoremap <F3> :set wrap! wrap?<CR>
+" F4 复制粘贴网页代码前开启
+set pastetoggle=<F4>
+" F5 显示可打印字符开关
+nnoremap <F5> :set list! list?<CR>
 " 常用分屏
-map <silent> <F3> <Esc>:He<cr>
-map <silent> <F4> <Esc>:Ve<cr>
-map <silent> <F5> <Esc>:Te<cr>
-" F6 换行开关
-nnoremap <F6> :set wrap! wrap?<CR>
-" F7 复制粘贴网页代码前开启
-set pastetoggle=<F7>
-" F8 显示可打印字符开关
-nnoremap <F8> :set list! list?<CR>
+nnoremap <leader>h :He<CR>
+nnoremap <leader>v :Ve<CR>
+nnoremap <leader>t :Te<CR>
 " 分屏窗口移动
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -125,10 +125,9 @@ noremap <leader>0 :tablast<cr>
 
 " 具体编辑文件类型的一般设置，比如不要 tab 等
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
-autocmd FileType ruby,javascript,html,css,xml set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType ruby,javascript,html,css,xml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
-au BufEnter ~/code/letv/sso/* setlocal tags+=~/code/letv/sso/tags
 
 " 自定义函数 {
     " 定义函数AutoSetFileHead，自动插入文件头
