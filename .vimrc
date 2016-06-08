@@ -70,7 +70,7 @@ set softtabstop=4                   " 敲入tab键时实际占有的列数
 " 自动
 autocmd! bufwritepost .vimrc source %
 autocmd BufNewFile *.sh,*.py,*php exec ":call AutoSetFileHead()"
-"autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " 修改默认键
 " 同物理行上线直接跳
@@ -93,6 +93,8 @@ nnoremap <F6> :set wrap! wrap?<CR>
 set pastetoggle=<F7>
 " F8 显示可打印字符开关
 nnoremap <F8> :set list! list?<CR>
+" F8 显示行号
+nnoremap <F9> :set nu! nu?<CR>
 " 分屏窗口移动
 map <C-j> <C-W>j
 map <C-k> <C-W>k
