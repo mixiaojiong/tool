@@ -19,3 +19,4 @@ make
 sudo make install
 pkill tmux
 tmux -V
+cp .tmux.conf ~/.tmux.conf
