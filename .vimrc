@@ -29,8 +29,8 @@ set scrolloff=10                    " 在上下移动光标时，光标的上方
 set number                          " 显示行号
 set ruler                           " 打开状态栏标尺
 set cursorline                      " 突出显示当前行
-"set showmatch                       " 高亮显示匹配的括号
-"set matchtime=3                     " 匹配括号高亮的时间(单位：0.1s
+set showmatch                      " 高亮显示匹配的括号
+set matchtime=3                    " 匹配括号高亮的时间(单位：0.1s
 set scrolloff=10                    " 光标到屏幕底端保留 10 行 (光标位于屏底看着非常不舒服的)
 set ruler                           " 显示右下角提示栏
 set showmode                        " 显示左下角状态栏
