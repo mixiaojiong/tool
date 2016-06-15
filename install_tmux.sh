@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo yum remove -y tmux libevent libevent-devel libevent-headers
 sudo yum install -y gcc kernel-devel make ncurses-devel
 
 wget http://www.monkey.org/~provos/libevent-2.0.10-stable.tar.gz
