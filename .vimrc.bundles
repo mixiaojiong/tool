@@ -40,7 +40,7 @@ Plugin 'maksimr/vim-jsbeautify'                         " 格式化代码
 
 " DoxygenToolkit {
     let g:DoxygenToolkit_briefTag_pre="@synopsis  "
-	let g:DoxygenToolkit_paramTag_pre="@raram "
+	let g:DoxygenToolkit_paramTag_pre="@param "
 	let g:DoxygenToolkit_returnTag="@return   "
 	let g:DoxygenToolkit_authorName="zhaorui, zhaorui3@le.com"
 " }
@@ -149,7 +149,7 @@ Plugin 'maksimr/vim-jsbeautify'                         " 格式化代码
     let g:solarized_termtrans=1
     let g:solarized_contrast="normal"
     let g:solarized_visibility="normal"
-    " let g:solarized_termcolors=256
+    "let g:solarized_termcolors=256
 " }
 
 " TagBar {

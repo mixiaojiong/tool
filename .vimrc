@@ -25,7 +25,6 @@ colorscheme solarized               " 颜色主题
 syntax on                           " 语法高亮
 set laststatus=2
 set showcmd                         " 显示命令
-set scrolloff=10                    " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 set number                          " 显示行号
 set ruler                           " 打开状态栏标尺
 set cursorline                      " 突出显示当前行
@@ -69,7 +68,7 @@ set softtabstop=4                   " 敲入tab键时实际占有的列数
 
 " 自动
 autocmd! bufwritepost .vimrc source %
-autocmd BufNewFile *.sh,*.py,*php exec ":call AutoSetFileHead()"
+autocmd BufNewFile *.sh,*.py,*.php,*.c exec ":call AutoSetFileHead()"
 autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " 修改默认键
@@ -84,16 +83,16 @@ map <F2>f :Dox<CR>
 map <F2>b :DoxBlock<CR>
 map <F2>c O/** */<Left><Left><CR>
 " 常用分屏
-map <silent> <F3> <Esc>:He<cr>
-map <silent> <F4> <Esc>:Ve<cr>
-map <silent> <F5> <Esc>:Te<cr>
+map <silent> <F3> <Esc>:He<CR>
+map <silent> <F4> <Esc>:Ve<CR>
+map <silent> <F5> <Esc>:Te<CR>
 " F6 换行开关
 nnoremap <F6> :set wrap! wrap?<CR>
 " F7 复制粘贴网页代码前开启
 set pastetoggle=<F7>
 " F8 显示可打印字符开关
 nnoremap <F8> :set list! list?<CR>
-" F8 显示行号
+" F9 显示行号
 nnoremap <F9> :set nu! nu?<CR>
 " 分屏窗口移动
 map <C-j> <C-W>j
@@ -120,7 +119,8 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
+noremap <leader>0 :tablast<CR>
+
 "==========================================
 " FileType Settings  文件类型设置
 "==========================================
@@ -149,6 +149,14 @@ au BufEnter ~/code/letv/sso/* setlocal tags+=~/code/letv/sso/tags
         "如果文件类型为.php文件
         if &filetype == 'php'
             call setline(1, "<?php")
+        endif
+
+        "如果文件类型为.c文件
+        if &filetype == 'c'
+            call setline(1, "#include <stdio.h>")
+            call append(1, "\#include <stdlib.h>")
+            call setline(3, "")
+            call setline(4, "int main(void) {")
         endif
 
         normal G
