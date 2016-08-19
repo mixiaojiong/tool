@@ -69,7 +69,7 @@ set softtabstop=4                   " 敲入tab键时实际占有的列数
 " 自动
 autocmd! bufwritepost .vimrc source %
 autocmd BufNewFile *.sh,*.py,*.php,*.c exec ":call AutoSetFileHead()"
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " 修改默认键
 " 同物理行上线直接跳
